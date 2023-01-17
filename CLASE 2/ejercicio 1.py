@@ -12,6 +12,7 @@ msg = "\t\t\tMenú\n 1.- Impresor de cuadrados en consola \n 2.- Identificar mul
 print(msg)
 
 # SUBPROGRAMA 1
+#   # Ingreso dato
 def SubProm1():
   while(True):
     Tama_Cua = input('Ingrese un solo numero para el tamaño de los lados : ')
@@ -20,7 +21,8 @@ def SubProm1():
       break
     else:
       print('Error, Digite denuevo')
-  impA = str('■ ')
+#   #Imprimo el cuadrado
+  impA = str('* ')
   impB = str('  ')
   for i in range (0,Tama_Cua,1 ) :
     if i==0 or i== (Tama_Cua -1):
@@ -29,13 +31,59 @@ def SubProm1():
       impB = impB*(Tama_Cua-2)
       print(f"{impA}{impB}{impA}")
       impB = str('  ')
+
+
 # SUBPROGRAMA 2
 def SubProm2():
-  print("gaaaa")
+#   #Ingreso dato
+  while True :
+    ListNum1 = input("Ingrese numero : ")
+    if ListNum1.isnumeric() :
+      ListNum1 = int(ListNum1)
+      break
+    else : 
+      print('Error, Digite denuevo')
+#   #Operacion 
+  for x in range (1,ListNum1+1) :
+    if ((x%2)==0): 
+      print(x)
+  
 
 # SUBPROGRAMA 3
 def SubProm3():
-  print("gaaaa")
+  ListPers = []
+#   # Ingreso dato
+  while True:
+    NumPers = input("Ingrese numero de personas deseado : ")
+    if NumPers.isnumeric():
+      NumPers = int(NumPers)
+      break
+    else :
+      print("ERROR, VUELVA A DIGITAR")
+#   # LLeno las listas con espacios 
+  for x in range (0,NumPers,1) :
+    CodAlum = x+1000
+    ListPers.append([CodAlum])
+    #print(ListPers)
+
+#   #Agrego los datos a mano
+  for x in range (0,NumPers,1) :
+                        #Ingreso  Nombre
+    NombreAdd = input(f" Ingrese nombre de alumno [{x+1}] : ")
+
+    while True:         #Ingreso Edad
+      EdadAdd = input(f" Ingrese edad del alumnno [{x+1}] : ")
+      if EdadAdd.isnumeric():
+        EdadAdd = int(EdadAdd)
+        break
+      else:
+        print("ERROR, VUELVA A DIGITAR")
+    ListPers[x].append(NombreAdd) #Guardo en Lista
+    ListPers[x].append(EdadAdd)
+  print("\tLista de mayores de edad")
+  for x in range (0,NumPers,1) :
+    if (ListPers[x][2]>= 18) :             #Imprimo en pantalla solo mayores de edad
+      print(ListPers[x])
 
 # EJECUTAR 
 while(True):
