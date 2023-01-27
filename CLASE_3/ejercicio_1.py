@@ -11,7 +11,7 @@ impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una ga
 y los mezcló de tal manera que logró hacer un libro de textos especimen.” """
 
 texto = "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando uimpresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textosy los mezcló de tal manera que logró hacer un libro de textos especimen."
-import os
+#import os
 import time
 def uno(a):
   print("\t>1<\n")
@@ -72,4 +72,3 @@ def program_1():
     except Exception as a:
       print(a)
       print("Error, intente denuevo")
-program_1()

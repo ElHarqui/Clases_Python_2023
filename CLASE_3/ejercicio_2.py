@@ -31,7 +31,7 @@ def SumaProgre():
     except Exception as e:
       print(e)
 
-def Program_2():
+def program_2():
   menu = "\t\t\t MENU\n 1.-Multiplicador por 2 (N veces)\n 2.-Suma progresiva hasta N\n  "
   print(menu)
   while True:
@@ -45,4 +45,3 @@ def Program_2():
       break
     except Exception as e:
       print(e)
-Program_2()
