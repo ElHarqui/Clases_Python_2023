@@ -72,3 +72,5 @@ def program_1():
     except Exception as a:
       print(a)
       print("Error, intente denuevo")
+if __name__ == "__main__" :
+  program_1()

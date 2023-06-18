@@ -18,7 +18,7 @@ Bibliotecaria = {
     },
   }
 #saludo
-print("\t\tBienvenido a la biblioteca virtual")
+print("\n\n\t\tBienvenido a la biblioteca virtual\n\n")
 os.system("pause")
 
 #Obtener lista de categorias de libros
@@ -27,15 +27,16 @@ tempnum1 = len(templist1)
 print('\tLISTA DE CATEGORIAS')
 for i in range (0,tempnum1,1):
   print(f"{i+1}.- {templist1[i]}")
+print(f"{tempnum1+1}.- agregar categoria")
 
 
 #Obtener nombres de los libros y autores
 while True:
-  tempnum2= input('Ingrese nombre o numero de la categoria deseada : ')
-  if tempnum2.isnumeric():
+  tempnum2= input('Ingrese nombre o numero de la categoria deseada : ')   #*CATEGORIAS
+  if tempnum2.isnumeric():                            ##
     tempnum2 = int(tempnum2)
-    if tempnum2 >=0 and tempnum2 <= tempnum1 :
-      tempnum2 = tempnum2 -1
+    if tempnum2 >= 0 and tempnum2 <= tempnum1 :
+      tempnum2 = tempnum2 - 1
       UsuCat = templist1[tempnum2] 
       break
     else:
@@ -45,9 +46,9 @@ while True:
     if UsuCat in templist1:
       break
     else:
-      print("error, intente denuevo")
+      print("error, intente denuevo")                 ##
 tempnum1 = len(Bibliotecaria['Categoria'][UsuCat])
-print("\tLista de Autores y Titulos de los libros")
+print("\tLista de Autores y Titulos de los libros")   #*AUTORES
 for x in range (0,tempnum1,1) :
   if Bibliotecaria['Categoria'][UsuCat][x][2] == 'disponible':
     print(f"{x+1}.-\t\t {Bibliotecaria['Categoria'][UsuCat][x][0]} : {Bibliotecaria['Categoria'][UsuCat][x][1]}")
@@ -56,7 +57,7 @@ for x in range (0,tempnum1,1) :
 
 # Cambiar estado de un libro a prestado 
 while True: 
-  UsuPres = input("Elija el numero un libro que desea : ")
+  UsuPres = input("Elija el numero un libro que desea : ")    #*Prestamo
   if UsuPres.isnumeric():
     UsuPres = int(UsuPres)
     UsuPres = UsuPres-1

@@ -26,6 +26,8 @@ if __name__ == '__main__':
     except Exception as e:
       print(e)
 
+#FUNCIONES  EJERCICIO 4 / 7 
+
 def RecursivSuma (num : int):
   if num >0:
     num = num + RecursivSuma(num-1)
